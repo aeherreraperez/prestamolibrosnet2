@@ -12225,11 +12225,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emiliano\\source\\repos\\prestamolibrosnet\\prestamolibrosnet\\prestamolibrosnet.csproj",
+      "projectUniqueName": "C:\\Users\\Emiliano\\Documents\\GitHub\\prestamolibrosnet2\\prestamolibrosnet\\prestamolibrosnet.csproj",
       "projectName": "prestamolibrosnet",
-      "projectPath": "C:\\Users\\Emiliano\\source\\repos\\prestamolibrosnet\\prestamolibrosnet\\prestamolibrosnet.csproj",
+      "projectPath": "C:\\Users\\Emiliano\\Documents\\GitHub\\prestamolibrosnet2\\prestamolibrosnet\\prestamolibrosnet.csproj",
       "packagesPath": "C:\\Users\\Emiliano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emiliano\\source\\repos\\prestamolibrosnet\\prestamolibrosnet\\obj\\",
+      "outputPath": "C:\\Users\\Emiliano\\Documents\\GitHub\\prestamolibrosnet2\\prestamolibrosnet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
