@@ -44,8 +44,10 @@ namespace prestamolibrosnet.Controllers
         }
 
         // GET: Prestamoes/Create
-        public IActionResult Create()
+        public ActionResult Create(int? libro_id, int? usuario_id)
         {
+            ViewData["libro_id"] = libro_id;
+            ViewData["usuario_id"] = usuario_id;
             return View();
         }
 
