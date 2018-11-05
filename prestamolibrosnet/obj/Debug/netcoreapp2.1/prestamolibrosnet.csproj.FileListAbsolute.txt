@@ -88,3 +88,4 @@ C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debu
 C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Prestamoes\Details.g.cshtml.cs
 C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Prestamoes\Edit.g.cshtml.cs
 C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Prestamoes\Index.g.cshtml.cs
+C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Libroes\Disponibles.g.cshtml.cs
