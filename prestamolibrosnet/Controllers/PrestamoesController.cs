@@ -44,10 +44,8 @@ namespace prestamolibrosnet.Controllers
         }
 
         // GET: Prestamoes/Create
-        public ActionResult Create(int? libro_id, int? usuario_id)
+        public IActionResult Create()
         {
-            ViewData["libro_id"] = libro_id;
-            ViewData["usuario_id"] = usuario_id;
             return View();
         }
 
@@ -56,7 +54,7 @@ namespace prestamolibrosnet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,fechaRealizado,fechaDevolucion,prestado")] Prestamo prestamo)
+        public async Task<IActionResult> Create([Bind("id,fechaRealizado,fechaDevolucion")] Prestamo prestamo)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +86,7 @@ namespace prestamolibrosnet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,fechaRealizado,fechaDevolucion,prestado")] Prestamo prestamo)
+        public async Task<IActionResult> Edit(int id, [Bind("id,fechaRealizado,fechaDevolucion")] Prestamo prestamo)
         {
             if (id != prestamo.id)
             {
