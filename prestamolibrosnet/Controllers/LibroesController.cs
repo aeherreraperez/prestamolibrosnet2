@@ -10,11 +10,10 @@ using prestamolibrosnet.Models;
 
 namespace prestamolibrosnet.Controllers
 {
-    
     public class LibroesController : Controller
     {
         private readonly ApplicationDbContext _context;
-        
+
         public LibroesController(ApplicationDbContext context)
         {
             _context = context;
@@ -55,7 +54,7 @@ namespace prestamolibrosnet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,isbn,titulo,autor,fecha,editorial")] Libro libro)
+        public async Task<IActionResult> Create([Bind("id,isbn,titulo,autor,fecha,editorial,OwnerID,prestado")] Libro libro)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +86,7 @@ namespace prestamolibrosnet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,isbn,titulo,autor,fecha,editorial")] Libro libro)
+        public async Task<IActionResult> Edit(int id, [Bind("id,isbn,titulo,autor,fecha,editorial,OwnerID,prestado")] Libro libro)
         {
             if (id != libro.id)
             {
