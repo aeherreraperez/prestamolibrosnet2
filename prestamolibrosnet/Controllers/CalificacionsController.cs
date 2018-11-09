@@ -20,9 +20,9 @@ namespace prestamolibrosnet.Controllers
         }
 
         // GET: Calificacions
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int usuarioid)
         {
-            return View(await _context.Calificacion.ToListAsync());
+             return View(await _context.Calificacion.Where(e=>e.usuario.id == usuarioid).ToListAsync());            
         }
 
         // GET: Calificacions/Details/5
@@ -44,8 +44,10 @@ namespace prestamolibrosnet.Controllers
         }
 
         // GET: Calificacions/Create
-        public IActionResult Create()
+        public IActionResult Create(int prestamoid)
         {
+            Prestamo prestamo = _context.Prestamo.Where(e => e.id == prestamoid).Single();
+            string tituloLibro = prestamo.libro.titulo;
             return View();
         }
 

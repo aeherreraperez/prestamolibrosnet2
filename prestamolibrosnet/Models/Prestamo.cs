@@ -12,5 +12,6 @@ namespace prestamolibrosnet.Models
         public Usuario usuario { get; set; }
         public DateTime fechaRealizado { get; set; }
         public DateTime fechaDevolucion { get; set; }
+        public Boolean prestado { get; set; }
     }
 }

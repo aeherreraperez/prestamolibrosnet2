@@ -4,16 +4,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Mis Calificaciones</h2>
+<h2>Index</h2>
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                <label>Evaluación</label>
+                @Html.DisplayNameFor(model => model.prestamo.libro.titulo)
             </th>
             <th>
-                <label>Observaciones</label>
+                @Html.DisplayNameFor(model => model.evaluacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.observacion)
             </th>
             <th></th>
         </tr>
@@ -22,13 +25,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.prestamo.libro.titulo)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.evaluacion)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.observacion)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.id">Detalles</a> 
+                @Html.ActionLink("Calificar", "Create", "Calificacions", new { idprestamo=item.prestamo.id})
             </td>
         </tr>
 }

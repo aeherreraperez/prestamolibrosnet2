@@ -1,34 +1,31 @@
 ﻿@model IEnumerable<prestamolibrosnet.Models.Libro>
 
 @{
-    ViewData["Title"] = "Mis Libros";
+    ViewData["Title"] = "Index";
 }
 
-<h2>Mis Libros</h2>
+<h2>Index</h2>
 
 <p>
-    <a asp-action="Create">Nuevo Libro</a>
+    <a asp-action="Create">Crear Nuevo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                <label>ISBN</label>
+                @Html.DisplayNameFor(model => model.isbn)
             </th>
             <th>
-                <label>Título</label>
+                @Html.DisplayNameFor(model => model.titulo)
             </th>
             <th>
-                <label>Autor</label>
+                @Html.DisplayNameFor(model => model.autor)
             </th>
             <th>
-                <label>Año</label>
+                @Html.DisplayNameFor(model => model.fecha)
             </th>
             <th>
-                <label>Editorial</label>
-            </th>
-            <th>
-                <label>Prestado</label>
+                @Html.DisplayNameFor(model => model.editorial)
             </th>
             <th></th>
         </tr>
@@ -50,9 +47,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.editorial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.prestado)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |

@@ -24,6 +24,13 @@
                 <span asp-validation-for="fechaDevolucion" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="prestado" /> @Html.DisplayNameFor(model => model.prestado)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>

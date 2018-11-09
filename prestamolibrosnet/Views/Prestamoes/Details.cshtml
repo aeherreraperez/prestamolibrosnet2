@@ -11,31 +11,26 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            <label>Libro</label>
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.libro.titulo)
-        </dd>
-        <dt>
-            <label>Categoría</label>
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.libro.categoria)
-        </dd>
-        <dt>
-            <label>Fecha de Préstamo</label>
+            @Html.DisplayNameFor(model => model.fechaRealizado)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.fechaRealizado)
         </dd>
         <dt>
-            <label>Fecha de Devolución</label>
+            @Html.DisplayNameFor(model => model.fechaDevolucion)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.fechaDevolucion)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prestado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prestado)
+        </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Index">Volver</a>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

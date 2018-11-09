@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] Prestamo Libros </title>
+    <title>@ViewData["Title"] - prestamolibrosnet</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -21,20 +21,19 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Navegacion </span>
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Préstamo de Libros</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">prestamolibrosnet</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Página de Inicio</a></li>
-                    <li><a asp-area="" asp-controller="Libroes" asp-action="Index">Mis Libros</a></li>
-                    <li><a asp-area="" asp-controller="Prestamoes" asp-action="Index">Mis Préstamos</a></li>
-                    <li><a asp-area="" asp-controller="Calificacions" asp-action="Index">Mis Calificaciones</a></li>
-                    <li><a asp-area="" asp-controller="Libroes" asp-action="Index">¿Qué voy a leer?</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Calificacions" asp-action="Index">Calificación</a></li>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -47,7 +46,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - Préstamo de Libros</p>
+            <p>&copy; 2018 - prestamolibrosnet</p>
         </footer>
     </div>
 
