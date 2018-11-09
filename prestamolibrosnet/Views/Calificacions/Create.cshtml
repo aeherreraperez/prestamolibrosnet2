@@ -4,27 +4,21 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Evaluación del Préstamo</h2>
+<h2>Create</h2>
 
-<h4>Calificación</h4>
+<h4>Calificacion</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <div>
-            <label>La "Calificación" va del 1 al 5, siendo 1 la nota más baja.</label>
-        </div>
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label>Aca va el nombre del libro</label>
-                 </div>
-            <div class="form-group">
-                <label>Calificación</label>
+                <label asp-for="evaluacion" class="control-label"></label>
                 <input asp-for="evaluacion" class="form-control" />
                 <span asp-validation-for="evaluacion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label >Observaciones</label>
+                <label asp-for="observacion" class="control-label"></label>
                 <input asp-for="observacion" class="form-control" />
                 <span asp-validation-for="observacion" class="text-danger"></span>
             </div>

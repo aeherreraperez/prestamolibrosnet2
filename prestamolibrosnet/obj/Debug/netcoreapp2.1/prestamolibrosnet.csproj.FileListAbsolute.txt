@@ -88,6 +88,11 @@ C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debu
 C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Prestamoes\Details.g.cshtml.cs
 C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Prestamoes\Edit.g.cshtml.cs
 C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Prestamoes\Index.g.cshtml.cs
+C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Create.g.cshtml.cs
+C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Delete.g.cshtml.cs
+C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Details.g.cshtml.cs
+C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Edit.g.cshtml.cs
+C:\Users\Emiliano\Documents\GitHub\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Index.g.cshtml.cs
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcoreapp2.1\prestamolibrosnet.deps.json
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcoreapp2.1\prestamolibrosnet.runtimeconfig.json
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcoreapp2.1\prestamolibrosnet.runtimeconfig.dev.json
@@ -95,7 +100,6 @@ C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\n
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcoreapp2.1\prestamolibrosnet.pdb
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcoreapp2.1\prestamolibrosnet.Views.dll
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcoreapp2.1\prestamolibrosnet.Views.pdb
-C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csprojAssemblyReference.cache
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csproj.CoreCompileInputs.cache
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.RazorAssemblyInfo.cache
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.RazorAssemblyInfo.cs
@@ -106,6 +110,11 @@ C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\n
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.TagHelpers.output.cache
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.RazorCoreGenerate.cache
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
+C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Create.g.cshtml.cs
+C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Delete.g.cshtml.cs
+C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Details.g.cshtml.cs
+C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Edit.g.cshtml.cs
+C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Index.g.cshtml.cs
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Categorias\Create.g.cshtml.cs
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Categorias\Delete.g.cshtml.cs
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Categorias\Details.g.cshtml.cs
@@ -143,8 +152,4 @@ C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\n
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.dll
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.pdb
 C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csproj.CopyComplete
-C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Create.g.cshtml.cs
-C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Delete.g.cshtml.cs
-C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Details.g.cshtml.cs
-C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Edit.g.cshtml.cs
-C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Calificacions\Index.g.cshtml.cs
+C:\Users\mnparapar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csprojAssemblyReference.cache

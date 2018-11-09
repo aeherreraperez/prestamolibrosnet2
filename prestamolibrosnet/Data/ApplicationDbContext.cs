@@ -18,6 +18,5 @@ namespace prestamolibrosnet.Data
         public DbSet<prestamolibrosnet.Models.Libro> Libro { get; set; }
         public DbSet<prestamolibrosnet.Models.Prestamo> Prestamo { get; set; }
         public DbSet<prestamolibrosnet.Models.Calificacion> Calificacion { get; set; }
-    
     }
 }
