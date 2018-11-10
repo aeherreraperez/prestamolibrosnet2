@@ -9,7 +9,7 @@ namespace prestamolibrosnet.Models
     {
         public int id { get; set; }
         public Libro libro { get; set; }
-        public Usuario usuario { get; set; }
+        public string OwnerID { get; set; }
         public DateTime fechaRealizado { get; set; }
         public DateTime fechaDevolucion { get; set; }
     }
