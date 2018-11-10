@@ -4,21 +4,21 @@
     ViewData["Title"] = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Eliminar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>¿Desea eliminar el Préstamo?</h3>
 <div>
     <h4>Prestamo</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.fechaRealizado)
+           <label>Fecha Realizado</label>
         </dt>
         <dd>
             @Html.DisplayFor(model => model.fechaRealizado)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.fechaDevolucion)
+            <label>Fecha Devolución</label>
         </dt>
         <dd>
             @Html.DisplayFor(model => model.fechaDevolucion)
@@ -27,7 +27,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="id" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Eliminar" class="btn btn-default" /> |
+        <a asp-action="Index">Volver</a>
     </form>
 </div>

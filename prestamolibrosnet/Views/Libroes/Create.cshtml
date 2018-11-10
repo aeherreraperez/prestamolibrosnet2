@@ -4,60 +4,59 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<h2>Crear Libro</h2>
 
-<h4>Libro</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="isbn" class="control-label"></label>
+                <label>ISBN</label>
                 <input asp-for="isbn" class="form-control" />
                 <span asp-validation-for="isbn" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="titulo" class="control-label"></label>
+                <label>Título</label>
                 <input asp-for="titulo" class="form-control" />
                 <span asp-validation-for="titulo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="autor" class="control-label"></label>
+                <label>Autor</label>
                 <input asp-for="autor" class="form-control" />
                 <span asp-validation-for="autor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="fecha" class="control-label"></label>
+                <label>Fecha</label>
                 <input asp-for="fecha" class="form-control" />
                 <span asp-validation-for="fecha" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="editorial" class="control-label"></label>
+                <label>Editorial</label>
                 <input asp-for="editorial" class="form-control" />
                 <span asp-validation-for="editorial" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="OwnerID" class="control-label"></label>
+                <label>Usuario</label>
                 <input asp-for="OwnerID" class="form-control" />
                 <span asp-validation-for="OwnerID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <div class="checkbox">
                     <label>
-                        <input asp-for="prestado" /> @Html.DisplayNameFor(model => model.prestado)
+                        <input asp-for="prestado" /> Prestado
                     </label>
                 </div>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Crear" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Volver</a>
 </div>
 
 @section Scripts {

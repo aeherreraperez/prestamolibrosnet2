@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace prestamolibrosnet.Data.Migrations
 {
-    public partial class prueba : Migration
+    public partial class prestamo : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -71,7 +71,7 @@ namespace prestamolibrosnet.Data.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     libroid = table.Column<int>(nullable: true),
-                    usuarioid = table.Column<int>(nullable: true),
+                    OwnerID = table.Column<string>(nullable: true),
                     fechaRealizado = table.Column<DateTime>(nullable: false),
                     fechaDevolucion = table.Column<DateTime>(nullable: false)
                 },
@@ -82,12 +82,6 @@ namespace prestamolibrosnet.Data.Migrations
                         name: "FK_Prestamo_Libro_libroid",
                         column: x => x.libroid,
                         principalTable: "Libro",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Prestamo_Usuario_usuarioid",
-                        column: x => x.usuarioid,
-                        principalTable: "Usuario",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -139,11 +133,6 @@ namespace prestamolibrosnet.Data.Migrations
                 name: "IX_Prestamo_libroid",
                 table: "Prestamo",
                 column: "libroid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Prestamo_usuarioid",
-                table: "Prestamo",
-                column: "usuarioid");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -155,10 +144,10 @@ namespace prestamolibrosnet.Data.Migrations
                 name: "Prestamo");
 
             migrationBuilder.DropTable(
-                name: "Libro");
+                name: "Usuario");
 
             migrationBuilder.DropTable(
-                name: "Usuario");
+                name: "Libro");
 
             migrationBuilder.DropTable(
                 name: "Categoria");

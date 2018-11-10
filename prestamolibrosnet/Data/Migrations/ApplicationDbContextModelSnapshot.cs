@@ -255,19 +255,17 @@ namespace prestamolibrosnet.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("OwnerID");
+
                     b.Property<DateTime>("fechaDevolucion");
 
                     b.Property<DateTime>("fechaRealizado");
 
                     b.Property<int?>("libroid");
 
-                    b.Property<int?>("usuarioid");
-
                     b.HasKey("id");
 
                     b.HasIndex("libroid");
-
-                    b.HasIndex("usuarioid");
 
                     b.ToTable("Prestamo");
                 });
@@ -361,10 +359,6 @@ namespace prestamolibrosnet.Data.Migrations
                     b.HasOne("prestamolibrosnet.Models.Libro", "libro")
                         .WithMany()
                         .HasForeignKey("libroid");
-
-                    b.HasOne("prestamolibrosnet.Models.Usuario", "usuario")
-                        .WithMany()
-                        .HasForeignKey("usuarioid");
                 });
 #pragma warning restore 612, 618
         }

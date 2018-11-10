@@ -4,60 +4,48 @@
     ViewData["Title"] = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Eliminar el Libro</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>¿Está seguro que desea eliminar el Libro?</h3>
 <div>
     <h4>Libro</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.isbn)
+            <label>ISBN</label>
         </dt>
         <dd>
             @Html.DisplayFor(model => model.isbn)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.titulo)
+            <label>Título</label>
         </dt>
         <dd>
             @Html.DisplayFor(model => model.titulo)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.autor)
+            <label>Autor</label>
         </dt>
         <dd>
             @Html.DisplayFor(model => model.autor)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.fecha)
+            <label>Fecha</label>
         </dt>
         <dd>
             @Html.DisplayFor(model => model.fecha)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.editorial)
+            <label>Editorial</label>
         </dt>
         <dd>
             @Html.DisplayFor(model => model.editorial)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerID)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.OwnerID)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.prestado)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.prestado)
         </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="id" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Eliminar" class="btn btn-default" /> |
+        <a asp-action="Index">Volver</a>
     </form>
 </div>
