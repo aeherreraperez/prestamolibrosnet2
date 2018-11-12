@@ -14,12 +14,12 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label>Fecha Realizado</label>
-                <input asp-for="fechaRealizado" class="form-control" />
+                <input asp-for="fechaRealizado" class="form-control" />@ViewBag.realizado
                 <span asp-validation-for="fechaRealizado" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label>Fecha Devolución</label>
-                <input asp-for="fechaDevolucion" class="form-control" />
+                <input asp-for="fechaDevolucion" class="form-control" /> @ViewBag.devolucion
                 <span asp-validation-for="fechaDevolucion" class="text-danger"></span>
             </div>
             <div class="form-group">

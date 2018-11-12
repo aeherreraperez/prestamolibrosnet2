@@ -25,19 +25,18 @@ namespace prestamolibrosnet.Controllers
         // GET: Libroes
         public async Task<IActionResult> Index()
         {
-
-
-
             // ViewBag.userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
             if (User.Identity.IsAuthenticated)
             {
                 var userName = User.FindFirst(ClaimTypes.Name).Value;
                 ViewBag.userName = userName;
             }
-            
-  
 
+            return View(await _context.Libro.ToListAsync());
+        }
 
+        public async Task<IActionResult> LibrosDisponibles()
+        {            
             return View(await _context.Libro.ToListAsync());
         }
 

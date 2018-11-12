@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -46,6 +47,8 @@ namespace prestamolibrosnet.Controllers
         // GET: Prestamoes/Create
         public IActionResult Create()
         {
+            ViewBag.realizado = DateTime.Today;
+            ViewBag.devolucion = DateTime.Today.AddDays(14);
             return View();
         }
 
