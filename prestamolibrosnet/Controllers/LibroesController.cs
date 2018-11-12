@@ -7,12 +7,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using prestamolibrosnet.Data;
 using prestamolibrosnet.Models;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace prestamolibrosnet.Controllers
 {
     public class LibroesController : Controller
     {
         private readonly ApplicationDbContext _context;
+      
 
         public LibroesController(ApplicationDbContext context)
         {
@@ -22,6 +25,18 @@ namespace prestamolibrosnet.Controllers
         // GET: Libroes
         public async Task<IActionResult> Index()
         {
+            // ViewBag.userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            if (User.Identity.IsAuthenticated)
+            {
+                var userName = User.FindFirst(ClaimTypes.Name).Value;
+                ViewBag.userName = userName;
+            }
+
+            return View(await _context.Libro.ToListAsync());
+        }
+
+        public async Task<IActionResult> LibrosDisponibles()
+        {            
             return View(await _context.Libro.ToListAsync());
         }
 
@@ -32,6 +47,9 @@ namespace prestamolibrosnet.Controllers
             {
                 return NotFound();
             }
+
+            //var usuarioId = User.Identity.GetUserId()
+            //strCurrentUserId = User.Identity.GetUserId();
 
             var libro = await _context.Libro
                 .FirstOrDefaultAsync(m => m.id == id);

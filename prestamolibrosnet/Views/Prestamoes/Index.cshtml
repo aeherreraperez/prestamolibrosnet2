@@ -24,9 +24,11 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
+    if (item.OwnerID == ViewBag.userName)
+    {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.libro.titulo)
+                @Html.DisplayFor(modelItem => item.idLibro)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.fechaRealizado)
@@ -34,10 +36,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.fechaDevolucion)
             </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.id">Detalles</a> |
-            </td>
         </tr>
+    }
 }
     </tbody>
 </table>

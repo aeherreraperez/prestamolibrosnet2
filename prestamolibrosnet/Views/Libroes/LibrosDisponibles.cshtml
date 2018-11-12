@@ -1,0 +1,73 @@
+﻿@model IEnumerable<prestamolibrosnet.Models.Libro>
+
+@{
+    ViewData["Title"] = "Mis Libros";
+}
+
+<h2>Libros Disponibles</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>ISBN</label>
+            </th>
+            <th>
+                <label>Título</label>
+            </th>
+            <th>
+                <label>Autor</label>
+            </th>
+            <th>
+                <label>Año</label>
+            </th>
+            <th>
+                <label>Editorial</label>
+            </th>
+            <th>
+                <label>Prestado</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.prestado == false)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.isbn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.autor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fecha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.editorial)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.prestado)
+                    </td>
+                    <td>
+                        <a asp-controller="Prestamoes" asp-action="Create" asp-route-myvar="@item.id">Solicitar</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@*
+
+    <p>
+
+         @ViewBag.userName
+    </p>
+
+*@
