@@ -55,7 +55,7 @@
                         @Html.DisplayFor(modelItem => item.prestado)
                     </td>
                     <td>
-                        <a asp-controller="Prestamoes" asp-action="Create" asp-route-id="@item.id">Solicitar</a>
+                        <a asp-controller="Prestamoes" asp-action="Create" asp-route-myvar="@item.id">Solicitar</a>
                     </td>
                 </tr>
             }

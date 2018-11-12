@@ -261,6 +261,8 @@ namespace prestamolibrosnet.Data.Migrations
 
                     b.Property<DateTime>("fechaRealizado");
 
+                    b.Property<int>("idLibro");
+
                     b.Property<int?>("libroid");
 
                     b.HasKey("id");

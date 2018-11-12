@@ -222,11 +222,9 @@ C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netco
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcoreapp2.1\prestamolibrosnet.pdb
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcoreapp2.1\prestamolibrosnet.Views.dll
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcoreapp2.1\prestamolibrosnet.Views.pdb
-C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csprojAssemblyReference.cache
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csproj.CoreCompileInputs.cache
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.RazorAssemblyInfo.cache
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.RazorAssemblyInfo.cs
-C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.AssemblyInfoInputs.cache
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.AssemblyInfo.cs
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.TagHelpers.input.cache
@@ -273,4 +271,5 @@ C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netco
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.RazorTargetAssemblyInfo.cs
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.Views.pdb
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csproj.CopyComplete
+C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\Razor\Views\Libroes\LibrosDisponibles.g.cshtml.cs
