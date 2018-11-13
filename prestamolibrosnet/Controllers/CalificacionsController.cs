@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -22,6 +23,11 @@ namespace prestamolibrosnet.Controllers
         // GET: Calificacions
         public async Task<IActionResult> Index()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                var userName = User.FindFirst(ClaimTypes.Name).Value;
+                ViewBag.userName = userName;
+            }
             return View(await _context.Calificacion.ToListAsync());
         }
 
@@ -46,6 +52,8 @@ namespace prestamolibrosnet.Controllers
         // GET: Calificacions/Create
         public IActionResult Create()
         {
+            //int idPrestamo = Convert.ToInt16(myVar);
+            //ViewBag.prestamos = new SelectList(_context.Prestamo.Where(e => e.id == idPrestamo), "id", "titulo");
             return View();
         }
 
@@ -54,11 +62,20 @@ namespace prestamolibrosnet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,evaluacion,observacion")] Calificacion calificacion)
+        public async Task<IActionResult> Create([Bind("id,idPrestamo,evaluacion,observacion")] Calificacion calificacion)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                var userName = User.FindFirst(ClaimTypes.Name).Value;
+                calificacion.OwnerID = userName;
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(calificacion);
+                //Prestamo prestamo = _context.Prestamo.Where(e => e.id == calificacion.idPrestamo).Single();
+                //prestamo.fechaDevolucion = DateTime.Today;
+                //_context.Update(prestamo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
