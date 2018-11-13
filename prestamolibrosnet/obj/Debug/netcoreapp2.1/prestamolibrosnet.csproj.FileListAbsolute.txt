@@ -334,3 +334,4 @@ C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcore
 C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.pdb
 C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csproj.CopyComplete
 C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csprojAssemblyReference.cache
+C:\Users\mnpar\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csprojAssemblyReference.cache

@@ -13,6 +13,7 @@ namespace prestamolibrosnet.Models
         public String autor { get; set; }
         public int fecha { get; set; }
         public String editorial { get; set; }
+        public String estado { get; set; }
         public Categoria categoria { get; set; }
         public string OwnerID { get; set; }
         public bool prestado { get; set; }

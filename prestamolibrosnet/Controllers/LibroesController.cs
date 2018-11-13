@@ -72,7 +72,7 @@ namespace prestamolibrosnet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,isbn,titulo,autor,fecha,editorial,OwnerID,prestado")] Libro libro)
+        public async Task<IActionResult> Create([Bind("id,isbn,titulo,autor,fecha,editorial,estado,OwnerID,prestado")] Libro libro)
         {
             if (ModelState.IsValid)
             {
