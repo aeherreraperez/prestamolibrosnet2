@@ -85,7 +85,7 @@ namespace prestamolibrosnet.Controllers
             }
             return View(prestamo);
         }
-
+        /*
         // GET: Prestamoes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -135,7 +135,7 @@ namespace prestamolibrosnet.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(prestamo);
-        }
+        }*/
 
         // GET: Prestamoes/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -170,5 +170,68 @@ namespace prestamolibrosnet.Controllers
         {
             return _context.Prestamo.Any(e => e.id == id);
         }
+
+
+        // GET: Prestamoes/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var prestamo = await _context.Prestamo.FindAsync(id);
+            if (prestamo == null)
+            {
+                return NotFound();
+            }
+            prestamo.fechaDevolucion = DateTime.Today;
+            _context.Update(prestamo);
+            Libro libro = _context.Libro.Where(e => e.id == prestamo.idLibro).Single();
+            libro.prestado = false;
+            _context.Update(libro);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        /*public IActionResult Devolver(Prestamo prestamo)
+        {
+            prestamo.fechaDevolucion = DateTime.Today;
+            return View();
+        }*/
+
+        /*[HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Devolver(int id, [Bind("id,fechaRealizado,fechaDevolucion")] Prestamo prestamo)
+        {
+            if (id != prestamo.id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                prestamo.fechaDevolucion = DateTime.Today;
+                try
+                {
+                    _context.Update(prestamo);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!PrestamoExists(prestamo.id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return RedirectToAction(nameof(Index));
+            //return View(prestamo);
+        }*/
     }
 }
