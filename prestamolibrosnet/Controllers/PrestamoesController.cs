@@ -66,7 +66,7 @@ namespace prestamolibrosnet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("id,idLibro")] Prestamo prestamo)
         {
-            prestamo.fechaDevolucion = DateTime.Today.AddDays(14);
+            //prestamo.fechaDevolucion = DateTime.Today.AddDays(14);
             prestamo.fechaRealizado = DateTime.Today;
 
             if (User.Identity.IsAuthenticated)

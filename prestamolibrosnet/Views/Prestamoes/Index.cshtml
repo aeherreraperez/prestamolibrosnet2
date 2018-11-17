@@ -44,8 +44,15 @@
                 @Html.DisplayFor(modelItem => item.fechaDevolucion)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Devolver</a> |
-                <a asp-controller="Calificacions" asp-action="Create" asp-route-myvar="@item.id">Calificar</a>
+                @if (item.fechaDevolucion.ToShortDateString().Equals("1/1/0001") == true)
+                {
+                    <a asp-action="Edit" asp-route-id="@item.id">Devolver</a>
+                }
+                @if (item.fechaDevolucion.ToShortDateString().Equals("1/1/0001") == false)
+                {
+                    <a asp-controller="Calificacions" asp-action="Create" asp-route-myvar="@item.id">Calificar</a>
+                }
+
             </td>
         </tr>
     }
