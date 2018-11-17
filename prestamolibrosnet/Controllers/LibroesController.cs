@@ -36,7 +36,13 @@ namespace prestamolibrosnet.Controllers
         }
 
         public async Task<IActionResult> LibrosDisponibles()
-        {            
+        {
+            var userName = "";
+            if (User.Identity.IsAuthenticated)
+            {
+                userName = User.FindFirst(ClaimTypes.Name).Value;
+                ViewBag.userName = userName;
+            }
             return View(await _context.Libro.ToListAsync());
         }
 
@@ -63,7 +69,7 @@ namespace prestamolibrosnet.Controllers
 
         // GET: Libroes/Create
         public IActionResult Create()
-        {
+        {            
             return View();
         }
 
@@ -72,8 +78,14 @@ namespace prestamolibrosnet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,isbn,titulo,autor,fecha,editorial,estado,OwnerID,prestado")] Libro libro)
+        public async Task<IActionResult> Create([Bind("id,isbn,titulo,autor,fecha,editorial,estado")] Libro libro)
         {
+            libro.prestado = false;
+            if (User.Identity.IsAuthenticated)
+            {
+                var userName = User.FindFirst(ClaimTypes.Name).Value;
+                libro.OwnerID = userName;
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(libro);
@@ -104,7 +116,7 @@ namespace prestamolibrosnet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,isbn,titulo,autor,fecha,editorial,OwnerID,prestado")] Libro libro)
+        public async Task<IActionResult> Edit(int id, [Bind("id,isbn,titulo,autor,fecha,editorial,estado")] Libro libro)
         {
             if (id != libro.id)
             {

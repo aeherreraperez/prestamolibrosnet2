@@ -25,6 +25,9 @@
                 <label>Editorial</label>
             </th>
             <th>
+                <label>Estado</label>
+            </th>
+            <th>
                 <label>Prestado</label>
             </th>
             <th></th>
@@ -33,31 +36,34 @@
     <tbody>
         @foreach (var item in Model)
         {
-            if (item.prestado == false)
+            if (item.prestado == false && item.OwnerID != ViewBag.userName)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.isbn)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.titulo)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.autor)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.fecha)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.editorial)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.prestado)
-                    </td>
-                    <td>
-                        <a asp-controller="Prestamoes" asp-action="Create" asp-route-myvar="@item.id">Solicitar</a>
-                    </td>
-                </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.isbn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.editorial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prestado)
+            </td>
+            <td>
+                <a asp-controller="Prestamoes" asp-action="Create" asp-route-myvar="@item.id">Solicitar</a>
+            </td>
+        </tr>
             }
         }
     </tbody>

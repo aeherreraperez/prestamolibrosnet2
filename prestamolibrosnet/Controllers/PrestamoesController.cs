@@ -28,6 +28,7 @@ namespace prestamolibrosnet.Controllers
                 var userName = User.FindFirst(ClaimTypes.Name).Value;
                 ViewBag.userName = userName;
             }
+            ViewBag.listaLibros = _context.Libro.ToList();
             return View(await _context.Prestamo.ToListAsync());
         }
 

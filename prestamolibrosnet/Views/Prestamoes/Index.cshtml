@@ -28,7 +28,14 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.idLibro)
+                @foreach (var i in ViewBag.listaLibros as List<Libro>)
+                {
+                    if (i.id == item.idLibro)
+                    {
+
+                        @Html.DisplayFor(modelItem => i.titulo)
+                    }
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.fechaRealizado)
