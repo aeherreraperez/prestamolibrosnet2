@@ -74,7 +74,7 @@ using prestamolibrosnet.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(361, 56, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a17d74b607aa41fd81d16811ab102329", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a12f5e92de114b6781c827c371b93f62", async() => {
                 BeginContext(407, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -109,7 +109,7 @@ using prestamolibrosnet.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(425, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7867617090c54fbfae72fca03b72d00d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bfa477c0a5e34f79bdad1a3c53bb7474", async() => {
                 BeginContext(447, 6, true);
                 WriteLiteral("Volver");
                 EndContext();

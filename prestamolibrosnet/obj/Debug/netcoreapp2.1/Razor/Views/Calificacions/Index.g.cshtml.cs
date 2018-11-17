@@ -107,7 +107,7 @@ using prestamolibrosnet.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(696, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c22a7f70423a4ac486e0024a53b0b8f7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae0fbeedf33d48159ab0decbf935b7ac", async() => {
                 BeginContext(744, 8, true);
                 WriteLiteral("Detalles");
                 EndContext();

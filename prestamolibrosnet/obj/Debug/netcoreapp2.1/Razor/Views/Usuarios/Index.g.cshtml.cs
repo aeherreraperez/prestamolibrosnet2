@@ -66,7 +66,7 @@ using prestamolibrosnet.Models;
             WriteLiteral("\r\n<h2>Usuarios</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(129, 40, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d143a9f617fe48b3bb7a017b87384227", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db06f36d42cf4be99d83d76ffc8d2772", async() => {
                 BeginContext(152, 13, true);
                 WriteLiteral("Crear Usuario");
                 EndContext();
@@ -170,7 +170,7 @@ using prestamolibrosnet.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1249, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05557e41b40d48fea019007297d31a78", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c91fd33bc30348fa8f69766977d2b969", async() => {
                 BeginContext(1294, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -205,7 +205,7 @@ using prestamolibrosnet.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1324, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd97c553e2394de99c08ec54b7f77c95", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee8bf0f3b32f4c0dba3177e9d2e26c83", async() => {
                 BeginContext(1372, 7, true);
                 WriteLiteral("Detales");
                 EndContext();
@@ -240,7 +240,7 @@ using prestamolibrosnet.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1403, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ef82abd0d3b402b8e898eb177e19cf0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "210245ae69eb451a849fd511e52ee52f", async() => {
                 BeginContext(1450, 8, true);
                 WriteLiteral("Eliminar");
                 EndContext();
