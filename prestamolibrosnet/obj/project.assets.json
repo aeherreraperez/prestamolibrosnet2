@@ -12218,23 +12218,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emiliano\\.nuget\\packages\\": {},
+    "C:\\Users\\Agu\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emiliano\\Source\\Repos\\aeherreraperez\\prestamolibrosnet2\\prestamolibrosnet\\prestamolibrosnet.csproj",
+      "projectUniqueName": "C:\\Users\\Agu\\Source\\Repos\\prestamolibrosnet2\\prestamolibrosnet\\prestamolibrosnet.csproj",
       "projectName": "prestamolibrosnet",
-      "projectPath": "C:\\Users\\Emiliano\\Source\\Repos\\aeherreraperez\\prestamolibrosnet2\\prestamolibrosnet\\prestamolibrosnet.csproj",
-      "packagesPath": "C:\\Users\\Emiliano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emiliano\\Source\\Repos\\aeherreraperez\\prestamolibrosnet2\\prestamolibrosnet\\obj\\",
+      "projectPath": "C:\\Users\\Agu\\Source\\Repos\\prestamolibrosnet2\\prestamolibrosnet\\prestamolibrosnet.csproj",
+      "packagesPath": "C:\\Users\\Agu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Agu\\Source\\Repos\\prestamolibrosnet2\\prestamolibrosnet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Emiliano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Agu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
