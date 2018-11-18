@@ -9,9 +9,11 @@ using prestamolibrosnet.Data;
 using prestamolibrosnet.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace prestamolibrosnet.Controllers
 {
+    [Authorize]
     public class LibroesController : Controller
     {
         private readonly ApplicationDbContext _context;
