@@ -153,7 +153,11 @@ namespace prestamolibrosnet.Controllers
             {
                 return NotFound();
             }
-
+            if (User.Identity.IsAuthenticated)
+            {
+                var userName = User.FindFirst(ClaimTypes.Name).Value;
+                libro.OwnerID = userName;
+            }
             if (ModelState.IsValid)
             {
                 try
