@@ -28,6 +28,8 @@ namespace prestamolibrosnet.Controllers
                 var userName = User.FindFirst(ClaimTypes.Name).Value;
                 ViewBag.userName = userName;
             }
+            ViewBag.listaPrestamos = _context.Prestamo.ToList();
+            ViewBag.listaLibros = _context.Libro.ToList();
             return View(await _context.Calificacion.ToListAsync());
         }
 
@@ -52,8 +54,6 @@ namespace prestamolibrosnet.Controllers
         // GET: Calificacions/Create
         public IActionResult Create()
         {
-            //int idPrestamo = Convert.ToInt16(myVar);
-            //ViewBag.prestamos = new SelectList(_context.Prestamo.Where(e => e.id == idPrestamo), "id", "titulo");
             return View();
         }
 
@@ -62,7 +62,7 @@ namespace prestamolibrosnet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,idPrestamo,evaluacion,observacion")] Calificacion calificacion)
+        public async Task<IActionResult> Create([Bind("id,idPrestamo, evaluacion,observacion")] Calificacion calificacion)
         {
             if (User.Identity.IsAuthenticated)
             {

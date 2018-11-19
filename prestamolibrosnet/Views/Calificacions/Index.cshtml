@@ -10,27 +10,100 @@
     <thead>
         <tr>
             <th>
+                Libro
+            </th>
+            <th>
                 <label>Evaluación</label>
             </th>
             <th>
                 <label>Observaciones</label>
             </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var prestamo in ViewBag.listaPrestamos as List<Prestamo>)
+        {
+            @foreach (var libro in ViewBag.listaLibros as List<Libro>)
+            {
+                if (prestamo.idLibro == libro.id && prestamo.OwnerID != ViewBag.userName)
+                {
+                    @foreach (var clasificacion in Model)
+                    {
+                        if (libro.OwnerID == ViewBag.userName && clasificacion.OwnerID != ViewBag.userName)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => libro.titulo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => clasificacion.evaluacion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => clasificacion.observacion)
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+            }
+        }
+    </tbody>
+</table>
+
+<h2>Calificaciones de Devolución</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Libro</label>
+            </th>
+            <th>
+                <label>Fecha Préstamo</label>
+            </th>
+            <th>
+                <label>Fecha Devolución</label>
+            </th>
+            <th>
+                <label>Usuario del Préstamo</label>
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.evaluacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.observacion)
-            </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.id">Detalles</a> 
-            </td>
-        </tr>
-}
+        @foreach (var prestamo in ViewBag.listaPrestamos as List<Prestamo>)
+        {
+            @foreach (var libro in ViewBag.listaLibros as List<Libro>)
+            {
+                if (prestamo.idLibro == libro.id && prestamo.OwnerID != ViewBag.userName && libro.OwnerID == ViewBag.userName)
+                {
+
+                    foreach (var item in Model)
+                    {
+                        if (prestamo.fechaDevolucion.ToShortDateString().Equals("1/1/0001") == false
+                            && item.OwnerID != ViewBag.userName)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => libro.titulo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => prestamo.fechaRealizado)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => prestamo.fechaDevolucion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => prestamo.OwnerID)
+                                </td>
+                                <td>
+                                    <a asp-controller="Calificacions" asp-action="Create">Calificar</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+
+            }
+        }
     </tbody>
 </table>
