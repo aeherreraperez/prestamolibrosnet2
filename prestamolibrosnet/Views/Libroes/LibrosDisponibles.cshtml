@@ -6,6 +6,14 @@
 
 <h2>Libros Disponibles</h2>
 
+<form asp-controller="Libroes" asp-action="LibrosDisponibles">
+    <p>
+        Titulo: <input type="text" name="SearchString">
+        Autor: <input type="text" name="SearchAutor">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
