@@ -9,9 +9,11 @@ using prestamolibrosnet.Data;
 using prestamolibrosnet.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace prestamolibrosnet.Controllers
 {
+    [Authorize]
     public class LibroesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -23,7 +25,7 @@ namespace prestamolibrosnet.Controllers
         }
 
         // GET: Libroes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString, string searchAutor)
         {
             // ViewBag.userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
             if (User.Identity.IsAuthenticated)
@@ -32,10 +34,24 @@ namespace prestamolibrosnet.Controllers
                 ViewBag.userName = userName;
             }
 
-            return View(await _context.Libro.ToListAsync());
+            var libros = from m in _context.Libro
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                libros = libros.Where(s => s.titulo.Contains(searchString));
+            }
+
+            if (!String.IsNullOrEmpty(searchAutor))
+            {
+                libros = libros.Where(x => x.autor.Contains(searchAutor));
+            }
+
+            return View(await libros.ToListAsync());
+            //return View(await _context.Libro.ToListAsync());
         }
 
-        public async Task<IActionResult> LibrosDisponibles()
+        public async Task<IActionResult> LibrosDisponibles(string searchString, string searchAutor)
         {
             var userName = "";
             if (User.Identity.IsAuthenticated)
@@ -43,7 +59,22 @@ namespace prestamolibrosnet.Controllers
                 userName = User.FindFirst(ClaimTypes.Name).Value;
                 ViewBag.userName = userName;
             }
-            return View(await _context.Libro.ToListAsync());
+
+            var libros = from m in _context.Libro
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                libros = libros.Where(s => s.titulo.Contains(searchString));
+            }
+
+            if (!String.IsNullOrEmpty(searchAutor))
+            {
+                libros = libros.Where(x => x.autor.Contains(searchAutor));
+            }
+
+            return View(await libros.ToListAsync());
+            //return View(await _context.Libro.ToListAsync());
         }
 
         // GET: Libroes/Details/5
