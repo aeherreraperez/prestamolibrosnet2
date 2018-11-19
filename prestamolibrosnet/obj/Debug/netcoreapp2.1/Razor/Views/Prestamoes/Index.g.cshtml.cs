@@ -151,7 +151,7 @@ using prestamolibrosnet.Models;
             WriteLiteral("                    ");
             EndContext();
             BeginContext(1247, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5a5b1f83ed594a89a7d7c482c22218b6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "872e6fca569643fea5569dd2a0d61314", async() => {
                 BeginContext(1292, 8, true);
                 WriteLiteral("Devolver");
                 EndContext();
@@ -203,7 +203,7 @@ using prestamolibrosnet.Models;
             WriteLiteral("                    ");
             EndContext();
             BeginContext(1456, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "64234309e3134c85a610cd07841ae98a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d4c63bde2174977b4057434df4cf5c1", async() => {
                 BeginContext(1510, 9, true);
                 WriteLiteral("Calificar");
                 EndContext();
