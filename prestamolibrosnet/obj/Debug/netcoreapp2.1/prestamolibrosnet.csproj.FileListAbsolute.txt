@@ -283,7 +283,6 @@ C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\bin\Debug\netcore
 C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csproj.CoreCompileInputs.cache
 C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.RazorAssemblyInfo.cache
 C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.RazorAssemblyInfo.cs
-C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.AssemblyInfoInputs.cache
 C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.AssemblyInfo.cs
 C:\Users\Agu\source\repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.TagHelpers.input.cache
@@ -396,3 +395,4 @@ C:\Users\Emiliano\Source\Repos\aeherreraperez\prestamolibrosnet2\prestamolibrosn
 C:\Users\Emiliano\Source\Repos\aeherreraperez\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.dll
 C:\Users\Emiliano\Source\Repos\aeherreraperez\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.pdb
 C:\Users\Emiliano\Source\Repos\aeherreraperez\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\prestamolibrosnet.csproj.CopyComplete
+C:\Users\Agu\Source\Repos\prestamolibrosnet2\prestamolibrosnet\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

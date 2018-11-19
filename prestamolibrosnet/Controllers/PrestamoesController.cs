@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using MimeKit;
 using prestamolibrosnet.Data;
 using prestamolibrosnet.Models;
 
@@ -84,8 +86,27 @@ namespace prestamolibrosnet.Controllers
                 libro.prestado = true;
                 _context.Update(libro);
                 await _context.SaveChangesAsync();
+
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress("PrestamosLibros", "prestamolibrosucu@gmail.com"));
+                message.To.Add(new MailboxAddress(libro.OwnerID));
+                message.Subject = "Nueva solicitud de prestamo";
+                message.Body = new TextPart("plain")
+                {
+                    Text = "Usted tiene una nueva solicitud de prestamo del libro: " + libro.titulo
+                };
+                using (var client = new SmtpClient())
+                {
+                    client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+                    client.Connect("smtp.gmail.com", 587, false);
+                    client.Authenticate("prestamolibrosucu@gmail.com", "Ucu.1234");
+                    client.Send(message);
+                    client.Disconnect(true);
+                }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(prestamo);
         }
         /*
