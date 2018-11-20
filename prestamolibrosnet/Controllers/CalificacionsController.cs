@@ -54,8 +54,10 @@ namespace prestamolibrosnet.Controllers
         }
 
         // GET: Calificacions/Create
-        public IActionResult Create()
+        public IActionResult Create(string myvar)
         {
+            int prestamoid = Convert.ToInt32(myvar);
+            ViewBag.prestamoid = prestamoid;
             return View();
         }
 

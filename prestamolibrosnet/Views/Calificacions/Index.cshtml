@@ -29,7 +29,7 @@
                 {
                     @foreach (var clasificacion in Model)
                     {
-                        if (libro.OwnerID == ViewBag.userName && clasificacion.OwnerID != ViewBag.userName)
+                        if (libro.OwnerID == ViewBag.userName && clasificacion.OwnerID != ViewBag.userName && prestamo.id == clasificacion.idPrestamo)
                         {
                             <tr>
                                 <td>
@@ -74,32 +74,36 @@
         {
             @foreach (var libro in ViewBag.listaLibros as List<Libro>)
             {
-                if (prestamo.idLibro == libro.id && prestamo.OwnerID != ViewBag.userName && libro.OwnerID == ViewBag.userName)
+                if (prestamo.idLibro == libro.id && libro.OwnerID == ViewBag.userName
+                    && prestamo.fechaDevolucion.ToShortDateString().Equals("1/1/0001") == false)
                 {
-
-                    foreach (var item in Model)
-                    {
-                        if (prestamo.fechaDevolucion.ToShortDateString().Equals("1/1/0001") == false
-                            && item.OwnerID != ViewBag.userName)
+                    bool existe = false;
+                    @foreach (var calificacion in Model)
+                    {                        
+                        @if (prestamo.id == calificacion.idPrestamo && calificacion.OwnerID == ViewBag.userName)
                         {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => libro.titulo)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => prestamo.fechaRealizado)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => prestamo.fechaDevolucion)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => prestamo.OwnerID)
-                                </td>
-                                <td>
-                                    <a asp-controller="Calificacions" asp-action="Create">Calificar</a>
-                                </td>
-                            </tr>
+                            existe = true;
                         }
+                    }
+                    if (existe == false)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => libro.titulo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => prestamo.fechaRealizado)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => prestamo.fechaDevolucion)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => prestamo.OwnerID)
+                            </td>
+                            <td>
+                                <a asp-controller="Calificacions" asp-action="Create" asp-route-myvar="@prestamo.id">Calificar</a>
+                            </td>
+                        </tr>
                     }
                 }
 

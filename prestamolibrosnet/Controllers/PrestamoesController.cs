@@ -33,6 +33,7 @@ namespace prestamolibrosnet.Controllers
                 ViewBag.userName = userName;
             }
             ViewBag.listaLibros = _context.Libro.ToList();
+            ViewBag.calificacion = _context.Calificacion.ToList();
             return View(await _context.Prestamo.ToListAsync());
         }
 
